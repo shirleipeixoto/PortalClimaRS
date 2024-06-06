@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#faixa-do-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5%;
+}
+
+.logo img {
+    height: 60px; 
+}
+
+#barra-de-pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+#barra-de-pesquisa img {
+    height: 20px; 
+    margin-right: 10px;
+}
+
+#barra-de-pesquisa input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* navbar */
+.navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 5%;
+}
+
+.navbar {
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.navbar ul li a:hover, 
+.navbar ul li a:focus {
+    background-color: #f1f1f1;
+}
+
+.navbar ul li a[href="alertas.html"] {
+    background-color: #007bff;
+    color: white;
+}
+
+main {
+    background-color: #ccc;
+    display: flex;
+    height: 80%;
+    width: 80;
+}
+
+footer {
+    background-color: #007bff;
+    display: flex;
+    height: 40%;
+    width: 100%;
+}
