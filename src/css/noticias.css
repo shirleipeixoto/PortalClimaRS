@@ -91,6 +91,9 @@ main {
     height: 80%;
     width: 80;
     padding: 0%;
+}
+
+.noticias img{
     flex-direction: column;
 }
 
@@ -98,17 +101,33 @@ main {
     height: 150px;
     width: 250px;
     margin-left: 30px;
-    margin-inline-end: 15px;
-    
+    margin-inline-end: 12px;
 }
 
-#lastNews #teste{
-    margin-top: 10px;
+#lastNews #ListaNoticias{
+    margin-top: 20px;
     display: flex;
+    margin-right: 300px;
+}
+
+#AjudeRG img{
+    height: 150px;
+    width: 250px;
+    margin-right: 60px;
+    margin-top: 80px;
+}
+
+#AjudeRG p{
+    margin-right: 35px;
 }
 
 article {
     background-color: #ccc;
+}
+
+article p{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 footer {
