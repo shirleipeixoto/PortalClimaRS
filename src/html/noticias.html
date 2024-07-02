@@ -7,26 +7,31 @@
     <link rel="stylesheet" href="/src/css/noticias.css">
 </head>
 <body>
-    <header class="header">
-        <p id="faixa-do-header">O Rio Grande do Sul Precisa de Ajuda.</p>   
-        <a href="index.html" class="logo">
-            <img src="/assets/logo.png" alt="logo">
-        </a>
-        <section>
-            <img src="/assets/lupa.png" alt="lupaDePesquisa">
-            <input type="text" placeholder="Pesquisar" alt="lupaDePesquisa">
-        </section>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="alertas.html">Alertas</a></li>
-                <li><a href="prevencoes.html">Prevencões</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header> 
+    <header>
+        <p id="faixa-do-header">O Rio Grande do Sul Precisa de Ajuda.</p>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <img src="/assets/logo.png" alt="logo">
+            </a>
+            <section id="barra-de-pesquisa">
+                <img src="/assets/lupa.png" alt="lupaDePesquisa">
+                <input type="text" placeholder="Pesquisar" alt="lupaDePesquisa">
+            </section>
+        </div>
+        <div class="navbar-container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="alertas.html">Alertas</a></li>
+                    <li><a href="prevencoes.html">Prevencões</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <article>
+        <hr color=grey> 
         <center>
             <h1>Clima no Rio Grande do Sul</h1>
         </center>
@@ -37,10 +42,8 @@
     </article>
     <section>
         <main>
-            <section id="lastNews">
-                <center>
+            <section id="lastNews"> 
                 <h3>Últimas Notícias Rio Grande do Sul</h3>
-                </center>
                 <div class="noticias">
                     <div id="ListaNoticias">
                         <img src="/assets/Img1.png" alt="Streamer Gaules">
