@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,7 +15,8 @@ header {
     align-items: center;
     width: 100%;
 }
-faixa-do-header {
+
+#faixa-do-header {
     background-color: #007bff;
     color: white;
     padding: 10px;
@@ -23,7 +30,7 @@ faixa-do-header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px 5%;
+    padding: px 5%;
 }
 
 .logo img {
@@ -39,6 +46,7 @@ faixa-do-header {
     height: 20px; 
     margin-right: 10px;
 }
+
 #barra-de-pesquisa input {
     padding: 5px;
     border: 1px solid #ccc;
@@ -95,14 +103,12 @@ main {
 
 .noticias img{
     flex-direction: column;
-}
-
-#lastNews img{
-    height: 150px;
-    width: 250px;
-    margin-left: 30px;
+    height: 120px;
+    width: 220px;
+    margin-left: 60px;
     margin-inline-end: 12px;
 }
+
 
 #lastNews #ListaNoticias{
     margin-top: 20px;
@@ -110,9 +116,15 @@ main {
     margin-right: 300px;
 }
 
+#lastNews h3 {
+    margin-top: 30px;
+    margin-left: 60px;
+    font-size: 26px;
+}
+
 #AjudeRG img{
-    height: 150px;
-    width: 250px;
+    height: 120px;
+    width: 220px;
     margin-right: 60px;
     margin-top: 80px;
 }
@@ -123,11 +135,18 @@ main {
 
 article {
     background-color: #ccc;
+    font-size: 19px;
 }
 
 article p{
+    font-family: 'Open Sans';
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 10px;
+}
+
+article h1{
+    padding: 1%;
 }
 
 footer {
@@ -135,4 +154,8 @@ footer {
     display: flex;
     height: 40%;
     width: 100%;
+}
+hr {
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
