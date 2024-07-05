@@ -1,72 +1,138 @@
-/* Navbar */
-.navbar {
-    background-color: #f8f8f8;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
+body  {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+  }
 
-.navbar ul {
+
+header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#faixa-do-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*width: 100%;*/
+   /* padding: 10px 5%;*/
+}
+
+body header ul {
+    display: flex;
     list-style: none;
+    justify-content: space-between;
+    gap: 3rem;
 }
 
-.navbar ul li {
-    margin: 0 15px;
+/*
+.logo img {
+    height: 60px; 
 }
 
-.navbar ul li a {
-    color: #333;
+#barra-de-pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+#barra-de-pesquisa img {
+    height: 20px; 
+    margin-right: 10px;
+}
+
+#barra-de-pesquisa input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+*/
+/*mains*/
+  main {
+      display: flexblock;
+      justify-content: space-between;
+      padding: 20px;
+     
+  }
+  
+  section {
+      flex: 1;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      border-radius: 8px;
+  }
+  .prevencao-tipos {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .recomendacoes-seguranca {
+      text-align: 0;
+      justify-content: center;
+  }
+  
+  main section h2 {
+      text-align: center;
+  
+  }
+  
+  
+  /* Adicionando estilos básicos para botões e imagens */
+  button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  
+  button:hover {
+      background-color: #0056b3;
+  }
+  
+  img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #007bff;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+
+.footer-item {
+    margin: 0 10px;
+}
+
+.footer a {
+    color: #000;
     text-decoration: none;
     font-weight: bold;
 }
 
-.navbar ul li a:hover {
-    color: #3366cc;
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-main h1, main h2, main h3 {
-    margin-bottom: 20px;
-}
-
-main img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-main a button {
-    background-color: #3366cc;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-main a button:hover {
-    background-color: #0055cc;
-}
-
-.prevention-tips, .safety-recommendations {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.safety-recommendations ul {
-    list-style: disc inside;
-}
-
-.safety-recommendations ul li {
-    margin-bottom: 10px;
+.footer img {
+    height: 50px; /* ajuste conforme necessário */
 }
