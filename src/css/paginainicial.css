@@ -46,6 +46,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 150px;
 }
 
 #faixa-do-header {
@@ -163,7 +164,9 @@ header {
     justify-content: flex-end; /* alinhar o QR Code à direita */
 }
 
-
+.imgalagada {
+  width: 100%;
+}
 
 
 .right-column img {
