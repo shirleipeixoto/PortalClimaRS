@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+   
+  }
+
+
+  body{
+    background-color: #ffffff;
+  }
+
+
+
+
+  main{
+    background-color: #D9D9D9;
+
+
+  }
+    /*.titulo{
+      font-size: 50px;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      position: relative;
+    }      */  
+
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* height: 10vh; altura do viewport */
+}
+
+
+
+
+#faixa-do-header {
+    background: #007bff;
+    color: white;
+    /* padding: 10px; */
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
+.imgalagada {
+  width: 100%;
+  height: 654px;
+  margin-top: -35px;
+}
+
+
+
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5%;
+}
+
+
+
+
+.logo img {
+    height: 60px;
+    position: relative;
+    top: 50px;
+}
+
+
+
+
+#barra-de-pesquisa {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: #D9D9D9;
+    border: none;
+    position: relative; /* posição relativa para que possa ser colada na faixa azul */
+    top: -28px; /* move a barra de pesquisa 10px para cima para que fique colada na faixa azul */
+    left: 95px;
+   
+}
+
+
+
+
+#barra-de-pesquisa img {
+    display: flex;
+    flex-direction: flex-end;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+
+
+#barra-de-pesquisa input {
+    padding: 6px;
+    border: 1px solid #D9D9D9;
+    border-radius: 0px;
+    background-color: #d9d9d9;
+}
+
+
+
+
+.navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 5%;
+}
+
+
+
+
+.navbar {
+    width: auto;
+    position: relative;
+    bottom: 10px;
+}
+
+
+
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+   
+}
+
+
+
+
+.navbar ul li {
+    margin: 0 10px;
+   
+}
+
+
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+
+
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    background-color: #f1f1f1;
+}
+
+
+
+
+.navbar ul li a[href="alertas.html"] {
+    background-color: #007bff;
+    color: white;
+}
+ 
+
+
+.left-column {
+  display: flex; /* usar flexbox para alinhar os links */
+  flex-direction: column; /* alinhar os links em coluna */
+  align-items: flex-start; /* alinhar os links à esquerda */
+  margin-left: 90px; /* alinhar as letras dos links */
+}
+
+
+
+
+.left-column a {
+  text-decoration: none; /* remover sublinhado dos links */
+  color: #ffffff; /* cor dos links */
+  margin-bottom: 10px; /* espaçamento entre os links */
+  font-family: "Inter", sans-serif;
+  font-size: 23px; /* tamanho da fonte dos links */
+  font-style: italic;
+}
+
+
+
+
+.left-column a:hover {
+  color: #D9D9D9; /* cor dos links ao passar o mouse */
+}
+
+
+
+
+.bandeiracentro img {
+  width: 150px; /* largura da bandeira */
+  height: 100px; /* altura da bandeira */
+  position: relative;
+  top: -20px;
+  right: 50px;
+}
+
+
+.right-column {
+    display: flex; /* usar flexbox para alinhar o QR Code */
+    justify-content: flex-end; /* alinhar o QR Code à direita */
+}
+
+
+
+
+.right-column img {
+    width: 130px; /* largura do QR Code */
+    height: 150; /* altura do QR Code */
+    position: relative;
+    right: 70px;
+}
+
+
+
+
+.social-link {
+    display: flex; /* usar flexbox para alinhar a imagem e o texto */
+    align-items: center; /* centralizar a imagem e o texto verticalmente */
+           
+}
+
+
+
+
+.social-link img {
+    width: 34px; /* largura da imagem */
+    height: 32px; /* altura da imagem */
+    margin-right: 45px; /* espaçamento entre a imagem e o texto */
+}
+
+
+
+
+.Copyright{
+  /* position: absolute; posiciona em relação à bandeira */
+  bottom: 10px;          
+  left: 710px; /* move o texto 20 pixels à esquerda da bandeira */
+  font-size: 20px; /* tamanho da fonte */
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  color: #000000;
+}
+
+
+
+
+h1{
+  font-family:  "Inter", sans-serif;
+  display: inline-block;
+ 
+  display: flex; align-items: center;
+  margin-left: 0px
+}
+
+
+
+
+p{
+  font-family:  "Inter", sans-serif;
+}
+
+
+
+
+.texto1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: larger;
+    font-family:  "Inter", sans-serif;
+  }
+  .texto h1 {
+    margin-bottom: 10px;
+    font-weight: 700 bolder;
+   
+   
+  }
+  .texto p {
+   
+    margin-top: 20px;
+  }
+
+
+
+
+.img-doacao {
+    align-self: flex-end; /* alinha a imagem ao final da linha */
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: -143px;
+}
+
+
+
+
+aside{
+  background-color: #D9D9D9;
+}
+
+
+
+
+div-text{
+    display: flex;
+    justify-content: center;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    padding: 10px 5%;
+}
+
+
+
+
+.button {
+    width: auto;
+    position: relative;
+    bottom: 5px;
+}
+
+
+
+
+.button {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+   
+}
+
+
+
+
+.button {
+    margin: 0 10px;
+    font-family: Arial, sans-serif;;
+}
+
+
+
+
+.button a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+
+
+
+.button a:hover,
+.button a:focus {
+    background-color: #f1f1f1;
+}
+
+
+
+
+.button a[href="alertas.html"] {
+    background-color: #007bff;
+    color: white;
+}
+ 
+
+
+.container { /* container das imgs das entidades que apoiam */
+  display: flex;
+  height: 300px;    
+  width: 100%;
+  background-color: #D9D9D9;
+  justify-content: space-around;/* justify-content: space-around; /*gera espaçamento */
+  align-items: center;/* align-items: center; alinha os itens na vertical */
+  flex-wrap: wrap; /*faz com que quando não tem mais espaço para div na linha, ela vá para baixo */
+  font-size: 0px; /* apenas para apagar  */
+ }
+
+
+
+
+ .item{
+  display: flex;
+  height: 90px;
+  width: 170px;
+ }
+
+
+
+
+ .imagensDoIndex {
+  position: relative;
+  /* margin-left: 130px; */
+ }
+
+
+ .footer {
+               
+    width: 100%;
+    height: 195px;
+    background-color: #007BFF; /* cor de fundo do footer */
+    display: flex; /* usar flexbox para alinhar os elementos */
+    justify-content: space-between; /* espaçar os elementos entre si */
+    align-items: center; /* centralizar os elementos verticalmente */
+    /* height: 20vh; altura do viewport */
+ 
+  }
