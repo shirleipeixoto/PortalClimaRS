@@ -1,72 +1,243 @@
-/* Navbar */
+body  {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#faixa-do-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5%;
+}
+
+.logo img {
+    height: 60px; 
+}
+
+#barra-de-pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+}
+
+#barra-de-pesquisa img {
+    height: 20px; 
+    margin-right: 10px;
+}
+
+#barra-de-pesquisa input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* navbar */
+.navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 5%;
+}
+
 .navbar {
-    background-color: #f8f8f8;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    width: auto;
 }
 
 .navbar ul {
-    display: flex;
-    justify-content: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .navbar ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .navbar ul li a {
-    color: #333;
     text-decoration: none;
-    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 4px;
 }
 
-.navbar ul li a:hover {
-    color: #3366cc;
+.navbar ul li a:hover, 
+.navbar ul li a:focus {
+    background-color: #f1f1f1;
 }
 
-/* Main Content */
-main {
-    padding: 20px;
-    text-align: center;
+.navbar ul li a[href="prevencoes.html"] {
+    background-color: #007bff;
+    color: white;
 }
 
-main h1, main h2, main h3 {
-    margin-bottom: 20px;
-}
+/*mains*/
+  main {
+      display: flexblock;
+      justify-content: space-between;
+      padding: 20px;
+      width: 100%;
+     
+  }
+  
+  section {
+      flex: 1;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      border-radius: 8px;
+  }
+  .prevencao-tipos {
+      text-align: center;
+      justify-content: center;
+      
+  }
 
-main img {
+  .prevencao-tipos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
-}
+  }
+  
+  .recomendacoes-seguranca {
+      text-align: 0;
+      justify-content: center;
+  }
+  
+  main section h2 {
+      text-align: center;
+  
+  }
+  
+  
+  /* Adicionando estilos básicos para botões e imagens */
+  button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  
+  button:hover {
+      background-color: #0056b3;
+  }
+  
+ /* img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+      text-align: center;
+  }*/
 
-main a button {
-    background-color: #3366cc;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-main a button:hover {
-    background-color: #0055cc;
-}
-
-.prevention-tips, .safety-recommendations {
-    background-color: #fff;
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0066ff; /* Cor de fundo */
     padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section.social {
+    flex: 1;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.safety-recommendations ul {
-    list-style: disc inside;
+.footer-section.social .footer-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
 }
 
-.safety-recommendations ul li {
+.footer-section.social .footer-item img {
+    height: 30px; /* Ajuste conforme necessário */
+    margin-right: 10px;
+}
+
+.footer h3{
+    color: white;
+}
+
+.footer-section.flag {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.footer-section.qr {
+    flex: 1;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.footer-item {
+    margin: 10px;
+}
+
+.footer-item img {
+    height: 50px; /* Ajuste conforme necessário */
     margin-bottom: 10px;
+
+}
+
+.footer .flag p {
+    margin-top: 10px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 66.66%; /* Posição da linha diagonal */
+    width: 2px; /* Largura da linha */
+    background-color: black; /* Cor da linha */
+    transform: skew(-20deg); /* Ângulo da linha */
+}
+
+.linha {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 33.33%; /* Posição da linha diagonal */
+    width: 2px; /* Largura da linha */
+    background-color: black; /* Cor da linha */
+    transform: skew(-20deg); /* Ângulo da linha */
 }

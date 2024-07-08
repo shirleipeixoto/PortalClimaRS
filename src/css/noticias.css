@@ -109,11 +109,11 @@ main {
     margin-inline-end: 12px;
 }
 
-
-#lastNews #ListaNoticias{
-    margin-top: 20px;
+#lastNews .ListaNoticias{
     display: flex;
+    margin-top: 20px;
     margin-right: 300px;
+    margin-bottom: 20px;
 }
 
 #lastNews h3 {
@@ -149,13 +149,103 @@ article h1{
     padding: 1%;
 }
 
-footer {
-    background-color: #007bff;
-    display: flex;
-    height: 40%;
-    width: 100%;
-}
 hr {
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+#data {
+    font-size: 13px;
+}
+
+#subtitulo {
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0066ff; /* Cor de fundo */
+    padding: 20px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section.social {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-section.social .footer-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.footer-section.social .footer-item img {
+    height: 30px; /* Ajuste conforme necessário */
+    margin-right: 10px;
+}
+
+.footer h3{
+    color: white;
+}
+
+.footer-section.flag {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.footer-section.qr {
+    flex: 1;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.footer-item {
+    margin: 10px;
+}
+
+.footer-item img {
+    height: 50px; /* Ajuste conforme necessário */
+    margin-bottom: 10px;
+
+}
+
+.footer .flag p {
+    margin-top: 10px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 66.66%; /* Posição da linha diagonal */
+    width: 2px; /* Largura da linha */
+    background-color: black; /* Cor da linha */
+    transform: skew(-20deg); /* Ângulo da linha */
+}
+
+.linha {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 33.33%; /* Posição da linha diagonal */
+    width: 2px; /* Largura da linha */
+    background-color: black; /* Cor da linha */
+    transform: skew(-20deg); /* Ângulo da linha */
 }
