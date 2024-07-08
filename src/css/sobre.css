@@ -1,0 +1,104 @@
+
+/* Estilos gerais */
+
+/* Estilos para padronizacao de blocos de conteúdo dos paragrafos */
+.padronizacao {
+    color: #030303; /* Cor do texto */
+    font-family: "open sans", sans-serif; /* Fonte do texto */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+
+/* Estilos para títulos */
+.tituloPrincipal {
+    font-family: 'montserrat', sans-serif; /* Fonte do texto */
+    text-align: left; /* Texto na esquerda */
+    margin-left: 20px; /* Margem esquerda */
+    color: #007bff; /* Cor azul para o título principal */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Margem inferior */
+    font-size: 64px; /* Tamanho da fonte */
+    font-style: bold; /* negrito */
+}
+
+/* Estilos para títulos secundarios */
+.tituloSecundario {
+    color: #333; /* Cor escura para títulos secundários */
+    text-align: left; /* Texto na esquerda */
+    margin-left: 40px; /* Margem esquerda */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Margem inferior */
+    font-size: 56px; /* Tamanho da fonte */
+    font-style: bold; /* negrito */
+}
+
+/* Estilos para parágrafos */
+.paragrafoPrincial {
+    text-align: justify; /* Texto justificado */
+    margin-left: 100px; /* Margem esquerda */
+    margin-right: 200px; /* Margem direita */
+    margin-bottom: 20px; /* Margem inferior */
+    font-size: 36px; /* Tamanho da fonte */
+    font-style: italic /* Itálico */;
+    font-style: bold; /* Negrito */
+}
+
+/* Estilos para o container dos cards de informações */
+.container {
+    
+    text-align: center; /* Alinha o conteúdo ao centro */
+    background-color: #828282; /* Fundo  */
+    width: 100%; /* Largura total */
+}
+
+/* Estilos para  título do container   */
+.titulo-container{
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Margem inferior */
+    font-size: 64px; /* Tamanho da fonte */
+
+}
+/* Estilos para os cards de informações */
+.info-cards {
+    display: flex; /* Usa flexbox para organizar os cards */
+    justify-content: space-around; /* Distribui os cards com espaço igual entre eles */
+    flex-wrap: wrap; /* Permite que os cards quebrem linhas em telas menores */
+    background-color: transparent; /* Fundo transparente */
+}
+
+.card {
+    
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Margem inferior */
+    box-shadow: 4px 0px 0px 0px rgba(0, 0, 0, 0.1); /* Sombra sutil para separar os cards*/
+    flex: 1 1 200px; /* Cada card ocupa 1 fração do espaço disponível, com largura mínima de 200px */
+    text-align: center; /* Alinha o conteúdo do card ao centro */
+    
+}
+
+.card img {
+    width: 50px; /* Largura da imagem */
+    height: 50px; /* Altura da imagem */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+.tituloCard {
+    font-size: 24px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Margem inferior */
+    font-style: bold; /* Negrito */
+    color: black; /* Cor do texto */
+}
+
+.texto-card {
+    font-size: 20px; /* Tamanho da fonte */
+    color: black; /* Cor do texto */
+}
+
+.agradecimento {
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 50px; /* Margem superior */
+    font-size: 24px; /* Tamanho da fonte */
+    font-style: italic; /* Itálico */
+    color: #007bff; /* Cor azul */
+}
