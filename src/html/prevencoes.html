@@ -7,32 +7,34 @@
     <link rel="stylesheet" href="/src/css/prevencoes.css">
 </head>
 <body>
-    <header class="header">
+    <header>
         <p id="faixa-do-header">O Rio Grande do Sul Precisa de Ajuda.</p>   
-        <a href="index.html" class="logo">
-            <img src="/assets/logo.png" alt="logo">
-        </a>
-        <section>
-            <img src="/assets/lupa.png" alt="lupaDePesquisa">
-            <input type="text" placeholder="Pesquisar" alt="lupaDePesquisa">
-        </section>
-         <div class="navbar-conteiner">
-          <nav class="navbar">
-             <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="alertas.html">Alertas</a></li>
-                <li><a href="prevencoes.html">Prevencões</a></li>
-                <li><a href="contato.html">Contato</a></li>
-             </ul>
-          </nav>
-         </div>
-    </header>  
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <img src="/assets/logo.png" alt="logo">
+            </a>
+            <section id="barra-de-pesquisa">
+                <img src="/assets/lupa.png" alt="lupa De Pesquisa">
+                <input type="text" placeholder="Pesquisar" alt="Barra De Pesquisa">
+            </section>
+        </div>
+        <div class="navbar-container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="alertas.html">Alertas</a></li>
+                    <li><a href="prevencoes.html">Prevencões</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section class="prevencao-tipos">
             <h1>Dicas de Prevenção</h1>
-            <img src="/assets/prev.jpg" alt="prev">
+                <img src="/assets/prev.jpg" alt="prev">
             <h3>Quais medidas poderiam ter sido tomadas para evitar tragédia no RS?</h3>
             <a href="https://www.otempo.com.br/brasil/2024/5/7/quais-medidas-poderiam-ser-tomadas-para-evitar-tragedia-no-rs-">
                 <button>Ler mais</button>
@@ -70,7 +72,31 @@
             </a>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="footer-section social">
+            <a href="https://www.youtube.com/watch?v=FAQl64vIRG8" class="footer-item">
+                <img src="/assets/redeSocial.png" alt="Redes Sociais">
+                <h3>Redes Sociais</h3>
+            </a>
+            <a href="/html/sobre.html" class="footer-item">
+                <img src="/assets/sobreNos.png" alt="Sobre Nós">
+                <h3>Sobre Nós</h3>
+            </a>
+            <a href="https://www.youtube.com/watch?v=FAQl64vIRG8" class="footer-item">
+                <img src="/assets/contato.png" alt="Contato">
+                <h3>Contato</h3>
+            </a>
+        </div>
+        <div class="linha"></div>
+        <div class="footer-section flag">
+            <img src="/assets/bandeiraRioGrande.png" alt="Bandeira do Rio Grande do Sul" class="footer-item">
+            <p>Copyright ©2024<br>Portal Do Clima RS</p>
+        </div>
+        <div class="footer-section qr">
+            <img src="/assets/qrCode.png" alt="QR Code" class="footer-item">
+        </div>
+    </footer>
+    <!--<footer>
         <div class="footer">
             <a href="https://www.youtube.com/watch?v=FAQl64vIRG8" class="footer-item">
                 <h3>Redes Sociais</h3>
@@ -87,6 +113,6 @@
             <img src="/assets/bandeiraRioGrande.png" alt="Bandeira do Rio Grande do Sul" class="footer-item">
             <img src="/assets/qrCode.png" alt="QR Code" class="footer-item">
         </div>
-    </footer>
+    </footer>-->
 </body>
 </html>

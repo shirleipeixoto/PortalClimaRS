@@ -1,12 +1,10 @@
 body  {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;   
   }
 
 
-header {
+  header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,22 +20,14 @@ header {
     margin: 0;
 }
 
-header section {
+.header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*width: 100%;*/
-   /* padding: 10px 5%;*/
+    width: 100%;
+    padding: 10px 5%;
 }
 
-body header ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    gap: 3rem;
-}
-
-/*
 .logo img {
     height: 60px; 
 }
@@ -45,6 +35,7 @@ body header ul {
 #barra-de-pesquisa {
     display: flex;
     align-items: center;
+    justify-content: flex-end; 
 }
 
 #barra-de-pesquisa img {
@@ -57,12 +48,53 @@ body header ul {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-*/
+
+/* navbar */
+.navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 5%;
+}
+
+.navbar {
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.navbar ul li a:hover, 
+.navbar ul li a:focus {
+    background-color: #f1f1f1;
+}
+
+.navbar ul li a[href="prevencoes.html"] {
+    background-color: #007bff;
+    color: white;
+}
+
 /*mains*/
   main {
       display: flexblock;
       justify-content: space-between;
       padding: 20px;
+      width: 100%;
      
   }
   
@@ -76,7 +108,15 @@ body header ul {
   .prevencao-tipos {
       text-align: center;
       justify-content: center;
-      align-items: center;
+      
+  }
+
+  .prevencao-tipos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
   }
   
   .recomendacoes-seguranca {
@@ -105,34 +145,99 @@ body header ul {
       background-color: #0056b3;
   }
   
-  img {
+ /* img {
       max-width: 100%;
       height: auto;
       display: block;
       margin-bottom: 10px;
-  }
+      text-align: center;
+  }*/
 
-  .footer {
+
+.footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: #007bff;
-    justify-content: center;
+    background-color: #0066ff; /* Cor de fundo */
     padding: 20px;
-    flex-wrap: wrap;
+    position: relative;
+    color: white;
+    text-decoration: none;
 }
 
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section.social {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-section.social .footer-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.footer-section.social .footer-item img {
+    height: 30px; /* Ajuste conforme necessário */
+    margin-right: 10px;
+}
+
+.footer h3{
+    color: white;
+}
+
+.footer-section.flag {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.footer-section.qr {
+    flex: 1;
+    text-align: right;
+    align-items: flex-end;
+}
 
 .footer-item {
-    margin: 0 10px;
+    margin: 10px;
 }
 
-.footer a {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
+.footer-item img {
+    height: 50px; /* Ajuste conforme necessário */
+    margin-bottom: 10px;
+
 }
 
-.footer img {
-    height: 50px; /* ajuste conforme necessário */
+.footer .flag p {
+    margin-top: 10px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 66.66%; /* Posição da linha diagonal */
+    width: 2px; /* Largura da linha */
+    background-color: black; /* Cor da linha */
+    transform: skew(-20deg); /* Ângulo da linha */
+}
+
+.linha {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 33.33%; /* Posição da linha diagonal */
+    width: 2px; /* Largura da linha */
+    background-color: black; /* Cor da linha */
+    transform: skew(-20deg); /* Ângulo da linha */
 }
