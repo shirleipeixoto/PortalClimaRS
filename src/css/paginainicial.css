@@ -29,152 +29,93 @@
 
 
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    /* height: 10vh; altura do viewport */
+/* reset CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
 
-
+/* Cabeçalho = header */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
 #faixa-do-header {
-    background: #007bff;
-    color: white;
-    /* padding: 10px; */
-    text-align: center;
-    width: 100%;
-    margin: 0;
-}
-
-
-
-
-.imgalagada {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
   width: 100%;
-  height: 654px;
-  margin-top: -35px;
+  margin: 0;
 }
-
-
-
 
 .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-
-
 
 .logo img {
-    height: 60px;
-    position: relative;
-    top: 50px;
+  height: 60px; 
 }
-
-
-
 
 #barra-de-pesquisa {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    background-color: #D9D9D9;
-    border: none;
-    position: relative; /* posição relativa para que possa ser colada na faixa azul */
-    top: -28px; /* move a barra de pesquisa 10px para cima para que fique colada na faixa azul */
-    left: 95px;
-   
+  display: flex;
+  cursor: pointer;
 }
-
-
-
 
 #barra-de-pesquisa img {
-    display: flex;
-    flex-direction: flex-end;
-    height: 20px;
-    margin-right: 10px;
+  height: 20px; 
+  margin-right: 10px;
 }
-
-
-
 
 #barra-de-pesquisa input {
-    padding: 6px;
-    border: 1px solid #D9D9D9;
-    border-radius: 0px;
-    background-color: #d9d9d9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-
-
-
+/* navbar = barra de navegação*/
 .navbar-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 10px 5%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 5%;
 }
-
-
-
-
-.navbar {
-    width: auto;
-    position: relative;
-    bottom: 10px;
-}
-
-
-
 
 .navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-   
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
-
-
-
 
 .navbar ul li {
-    margin: 0 10px;
-   
+  margin: 0 10px;
 }
-
-
-
 
 .navbar ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 15px;
-    border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 4px;
 }
 
-
-
-
-.navbar ul li a:hover,
+.navbar ul li a:hover, 
 .navbar ul li a:focus {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
-
-
-
-.navbar ul li a[href="alertas.html"] {
-    background-color: #007bff;
-    color: white;
+.navbar ul li a[href="index.html"] {
+  background-color: #007bff;
+  color: white;
 }
  
 
@@ -420,14 +361,83 @@ div-text{
  }
 
 
- .footer {
-               
-    width: 100%;
-    height: 195px;
-    background-color: #007BFF; /* cor de fundo do footer */
-    display: flex; /* usar flexbox para alinhar os elementos */
-    justify-content: space-between; /* espaçar os elementos entre si */
-    align-items: center; /* centralizar os elementos verticalmente */
-    /* height: 20vh; altura do viewport */
- 
-  }
+ footer {
+  background-color: #007bff;
+  height: 140px;  
+  width: 100%;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  height: 100%;
+}
+
+#qrcode {
+  height: 100px;
+  width: 100px;
+}
+
+#bandeira {
+  height: 80px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.elementsfooter {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.elementsfooter a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.elementsfooter img {
+  margin-right: 10px;
+  height: 20px; 
+  width: 20px;   
+}
+
+.elementsfooter h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+#footerfeio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.middle-section {
+  text-align: center;
+}
+
+.diagonal-line {
+  position: absolute;
+  width: 1px;
+  background-color: rgb(0, 0, 0);
+  height: 180px; 
+}
+
+.diagonal-line.left {
+  top: 0;
+  left: 33.33%;
+  transform: rotate(45deg);
+}
+
+.diagonal-line.right {
+  top: 0;
+  left: 66.66%;
+  transform: rotate(45deg);
+}

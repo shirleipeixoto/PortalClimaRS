@@ -78,11 +78,6 @@ header {
     background-color: #f1f1f1;
 }
 
-.navbar ul li a[href="alertas.html"] {
-    background-color: #007bff;
-    color: white;
-}
-
 /* rodapé = footer */
 
 footer {
