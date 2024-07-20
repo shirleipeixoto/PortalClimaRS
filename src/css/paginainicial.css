@@ -12,8 +12,6 @@
   }
 
 
-
-
   main{
     background-color: #D9D9D9;
 
@@ -29,48 +27,51 @@
 
 
 
-/* reset CSS*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: sans-serif;
-}
-
-/* Cabeçalho = header */
 header {
-  display: flex;
-  flex-direction: column;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    
+ }
+  
+  #faixa-do-header {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+  }
+
+
+
+
+.imgalagada {
   width: 100%;
-  height: 150px;
+  height: 500px;
+  margin-top: -35px;
 }
 
-#faixa-do-header {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  margin: 0;
-}
+
+
 
 .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 10px 5%;
 }
 
 .logo img {
   height: 60px; 
 }
 
+
 #barra-de-pesquisa {
   display: flex;
-  cursor: pointer;
+  align-items: center;
 }
 
 #barra-de-pesquisa img {
@@ -79,16 +80,21 @@ header {
 }
 
 #barra-de-pesquisa input {
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-/* navbar = barra de navegação*/
+/* navbar */
 .navbar-container {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   padding: 10px 5%;
+}
+
+.navbar {
+  width: auto;
 }
 
 .navbar ul {
@@ -113,12 +119,13 @@ header {
 .navbar ul li a:focus {
   background-color: #f1f1f1;
 }
-
-.navbar ul li a[href="index.html"] {
-  background-color: #007bff;
-  color: white;
-}
  
+.imgalagada {
+  width: 100%;
+  height: 500px;
+  margin-top: -35px;
+}
+
 
 
 .left-column {
@@ -164,9 +171,7 @@ header {
     justify-content: flex-end; /* alinhar o QR Code à direita */
 }
 
-.imgalagada {
-  width: 100%;
-}
+
 
 
 .right-column img {
@@ -198,14 +203,14 @@ header {
 
 
 .Copyright{
-  /* position: absolute; posiciona em relação à bandeira */
+  position: relative;/* position: absolute; posiciona em relação à bandeira */
   bottom: 10px;          
-  left: 710px; /* move o texto 20 pixels à esquerda da bandeira */
+  left: -50px; /* move o texto 20 pixels à esquerda da bandeira */
   font-size: 20px; /* tamanho da fonte */
   font-family: "Inter", sans-serif;
   font-style: italic;
-  color: #000000;
-}
+  color: #ffffff;
+} 
 
 
 
@@ -219,50 +224,44 @@ h1{
 }
 
 
-
-
 p{
   font-family:  "Inter", sans-serif;
 }
 
 
-
-
 .texto1{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column;  
     font-size: larger;
+    font-size: 20px;
     font-family:  "Inter", sans-serif;
+    margin-top: 10px;
   }
-  .texto h1 {
+
+  
+  /* .texto h1 {
     margin-bottom: 10px;
-    font-weight: 700 bolder;
-   
-   
-  }
-  .texto p {
-   
+    font-weight: 700 bolder;  
+  } */
+
+  /* .texto p {
     margin-top: 20px;
-  }
-
-
-
+  } */
 
 .img-doacao {
-    align-self: flex-end; /* alinha a imagem ao final da linha */
-    margin-left: auto;
-    margin-right: 0px;
-    margin-top: -143px;
+  /* position: absolute;
+  top: 30px; */
+  height: 500px;
+  
+  align-self: flex-end; /* alinha a imagem ao final da linha */
+  /* margin-left: auto; */
+  margin-top: -180px;
 }
-
-
 
 
 aside{
   background-color: #D9D9D9;
 }
-
 
 
 
@@ -278,8 +277,6 @@ div-text{
     width: 30%;
     padding: 10px 5%;
 }
-
-
 
 
 .button {
@@ -334,7 +331,6 @@ div-text{
 }
  
 
-
 .container { /* container das imgs das entidades que apoiam */
   display: flex;
   height: 300px;    
@@ -347,15 +343,11 @@ div-text{
  }
 
 
-
-
  .item{
   display: flex;
   height: 90px;
   width: 170px;
  }
-
-
 
 
  .imagensDoIndex {
@@ -387,7 +379,7 @@ div-text{
   width: 100px;
 }
 
-#bandeira {
+.bandeira {
   height: 80px;
   width: auto;
   margin-bottom: 10px;
@@ -416,7 +408,7 @@ div-text{
   font-size: 14px;
 }
 
-#footerfeio {
+#footer-setor {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -430,7 +422,7 @@ div-text{
   position: absolute;
   width: 1px;
   background-color: rgb(0, 0, 0);
-  height: 180px; 
+  height: 190px; 
 }
 
 .diagonal-line.left {
@@ -441,6 +433,6 @@ div-text{
 
 .diagonal-line.right {
   top: 0;
-  left: 66.66%;
+  left: 66.80%;
   transform: rotate(45deg);
 }
