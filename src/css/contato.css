@@ -15,6 +15,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 #faixa-do-header {
@@ -49,7 +50,7 @@ header {
 #barra-de-pesquisa input {
   border: 1px solid #ccc;
   border-radius: 4px;
-  height: 5px;
+  height: 20px;
 }
 
 /* navbar = barra de navegação*/
@@ -57,7 +58,7 @@ header {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding: 10px 5%;
+  padding: 10px;
 }
 
 .navbar ul {
@@ -92,7 +93,7 @@ header {
 main {
     padding: 20px;
     min-height: 60vh;
-    background-color: #f4f4f4; 
+    background-color: #e9e9e9; 
   }
   
   h1 {
@@ -140,8 +141,7 @@ main {
     color: #333;
   }
   
-  input,
-  textarea {
+  main input, textarea {
     width: calc(100% - 22px);
     padding: 12px;
     margin-bottom: 20px;
