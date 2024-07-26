@@ -1,5 +1,5 @@
 // Definindo uma classe personalizada de ícone que estende L.Icon
-var EventIcon = L.Icon.extend({
+let EventIcon = L.Icon.extend({
   options: {
       iconSize:     [30, 30],
       shadowSize:   [50, 64],
@@ -10,18 +10,18 @@ var EventIcon = L.Icon.extend({
 });
 
 // Criando ícones para enchentes com diferentes graus
-var aguaLeve = new EventIcon({iconUrl: '../../assets/flooded-housegreen.png'});
-var aguaModerada = new EventIcon({iconUrl: '../../assets/flooded-houseorange.png'});
-var aguaSevera = new EventIcon({iconUrl: '../../assets/floodRed.png'});
+let aguaLeve = new EventIcon({iconUrl: '../../assets/flooded-housegreen.png'});
+let aguaModerada = new EventIcon({iconUrl: '../../assets/flooded-houseorange.png'});
+let aguaSevera = new EventIcon({iconUrl: '../../assets/floodRed.png'});
 
 // Criando ícones para deslizamentos com diferentes graus
-var DeslizamentoLeve = new EventIcon({iconUrl: '../../assets/landslidegreen.png'});
-var DeslizamentoModerado = new EventIcon({iconUrl: '../../assets/landslideorange.png'});
-var DeslizamentoSevero = new EventIcon({iconUrl: '../../assets/landslidered.png'});
+let DeslizamentoLeve = new EventIcon({iconUrl: '../../assets/landslidegreen.png'});
+let DeslizamentoModerado = new EventIcon({iconUrl: '../../assets/landslideorange.png'});
+let DeslizamentoSevero = new EventIcon({iconUrl: '../../assets/landslidered.png'});
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  var map = L.map('map').setView([-30.0344, -51.2171], 10);
+  let map = L.map('map').setView([-30.0344, -51.2171], 10);
 
   // Adicione o estilo Humanitarian do OpenStreetMap ou outro tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }).addTo(map);
 
   // Definindo os grupos de marcadores
-  var markers = {
+  let markers = {
     aguaLeve: L.layerGroup(),
     aguaModerada: L.layerGroup(),
     aguaSevera: L.layerGroup(),
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
   L.marker([-29.9797, -51.2363], {icon: aguaLeve}).bindPopup("Três Pontes - Baixo").addTo(markers.aguaLeve);
 
   // Adicionando todos os grupos ao mapa
-  for (var key in markers) {
+  for (let key in markers) {
     if (markers.hasOwnProperty(key)) {
       markers[key].addTo(map);
     }
@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Função para atualizar a visibilidade dos marcadores com base no zoom
   function updateMarkerVisibility() {
-    var zoom = map.getZoom();
+    let zoom = map.getZoom();
 
     // Definir os limites de zoom para mostrar ou ocultar os marcadores
-    var zoomThresholds = {
+    let zoomThresholds = {
       aguaLeve: 9,
       aguaModerada: 9,
       aguaSevera: 9,
@@ -71,10 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
     Object.keys(markers).forEach(function(key) {
       if (zoom < zoomThresholds[key]) {
         map.removeLayer(markers[key]); // Remove os grupos de marcadores se o zoom for menor que o limite
-      } else {
-        if (!map.hasLayer(markers[key])) {
+      } else { (!map.hasLayer(markers[key]))
           markers[key].addTo(map); // Adiciona os grupos de volta se o zoom for maior que o limite
-        }
       }
     });
   }
