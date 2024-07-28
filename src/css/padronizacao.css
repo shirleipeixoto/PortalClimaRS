@@ -1,9 +1,9 @@
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
-  
+    margin-bottom: 20px;
+    background-color: white;
 }
 
 #faixa-do-header {
@@ -19,8 +19,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 10px 5%;
 }
 
 .logo img {
@@ -29,7 +27,7 @@ header {
 
 #barra-de-pesquisa {
     display: flex;
-    align-items: center;
+    cursor: pointer;
 }
 
 #barra-de-pesquisa img {
@@ -38,21 +36,16 @@ header {
 }
 
 #barra-de-pesquisa input {
-    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-/* navbar */
+/* navbar = barra de navegação*/
 .navbar-container {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 10px 5%;
-}
-
-.navbar {
-    width: auto;
+    padding: 10px;
 }
 
 .navbar ul {
@@ -78,8 +71,12 @@ header {
     background-color: #f1f1f1;
 }
 
-/* rodapé = footer */
+.navbar ul li a[href=".html"] {
+    background-color: #007bff;
+    color: white;
+}
 
+/* rodapé = footer */
 footer {
     background-color: #007bff;
     height: 140px;  
@@ -132,7 +129,7 @@ footer {
     font-size: 14px;
 }
 
-#footer-setor {
+#footerfeio {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -1,5 +1,16 @@
+/* reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    background-color:  #e9e9e9;
+}   
 
-/* Estilos gerais */
 
 /* Estilos para padronizacao de blocos de conteúdo dos paragrafos */
 .padronizacao {
@@ -7,7 +18,6 @@
     font-family: "open sans", sans-serif; /* Fonte do texto */
     font-size: 24px; /* Tamanho da fonte */
 }
-
 
 /* Estilos para títulos */
 .tituloPrincipal {
@@ -17,18 +27,7 @@
     color: #007bff; /* Cor azul para o título principal */
     padding: 20px; /* Espaçamento interno */
     margin-bottom: 10px; /* Margem inferior */
-    font-size: 64px; /* Tamanho da fonte */
-    font-style: bold; /* negrito */
-}
-
-/* Estilos para títulos secundarios */
-.tituloSecundario {
-    color: #333; /* Cor escura para títulos secundários */
-    text-align: left; /* Texto na esquerda */
-    margin-left: 40px; /* Margem esquerda */
-    padding: 20px; /* Espaçamento interno */
-    margin-bottom: 10px; /* Margem inferior */
-    font-size: 56px; /* Tamanho da fonte */
+    font-size: 44px; /* Tamanho da fonte */
     font-style: bold; /* negrito */
 }
 
@@ -38,14 +37,13 @@
     margin-left: 100px; /* Margem esquerda */
     margin-right: 200px; /* Margem direita */
     margin-bottom: 20px; /* Margem inferior */
-    font-size: 36px; /* Tamanho da fonte */
+
     font-style: italic /* Itálico */;
-    font-style: bold; /* Negrito */
+
 }
 
 /* Estilos para o container dos cards de informações */
 .container {
-    
     text-align: center; /* Alinha o conteúdo ao centro */
     background-color: #828282; /* Fundo  */
     width: 100%; /* Largura total */
@@ -56,7 +54,7 @@
     color: white; /* Cor do texto */
     padding: 20px; /* Espaçamento interno */
     margin-bottom: 20px; /* Margem inferior */
-    font-size: 64px; /* Tamanho da fonte */
+    font-size: 44px; /* Tamanho da fonte */
 
 }
 /* Estilos para os cards de informações */
@@ -84,7 +82,7 @@
 }
 
 .tituloCard {
-    font-size: 24px; /* Tamanho da fonte */
+    font-size: 14px; /* Tamanho da fonte */
     margin-bottom: 10px; /* Margem inferior */
     font-style: bold; /* Negrito */
     color: black; /* Cor do texto */

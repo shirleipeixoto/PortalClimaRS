@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/paginainicial.css">          
-    <title>Página Inicial</title>
-    <link rel="stylesheet" href="css/paginainicial.css">  
+    <title>Página Inicial</title> 
 </head>
 <body>
     <header>
         <p id="faixa-do-header">O Rio Grande do Sul Precisa de Ajuda.</p>   
         <div class="header-top">
             <a href="index.html" class="logo">
-                <img src="/assets/img.alagada.png" alt="logo">
+                <img src="/assets/logo.png" alt="logo">
             </a>
             <section id="barra-de-pesquisa">
                 <img src="/assets/lupa.png" alt="lupa De Pesquisa">
@@ -30,80 +29,47 @@
                 </ul>
             </nav>
         </div>
-    </header>       
-<main>
-    <h1 class="titulo">PORTAL CLIMARS</h1>
-    <divimagem>
-        <img class="imgalagada" src="css/titulo.png" alt="Casas inundadas no Rio Grande do Sul">
-    </divimagem>
-    <div class="texto1">
-        <h1>Como você pode ajudar?</h1>
-        <p class="texto" style="font-size: 18px;"> Aqui reunimos informações de locais que servem de abrigos e pontos <br> coleta em todo estado. Você escolhe a melhor forma de ajudar. <br>
-            - Faça sua doação por PIX<br>
-            - leve sua doação num local próximo a você </p>          
-            <div class="button-container">
-                <divbutton class="button">
-                    <a href="alertas.html">Clique aqui para doar</a>
-                </divbutton>
+    </header>     
+    <main>
+        <section id="parte-1">
+            <p class="portal-clima">
+                Portal Clima<span class="hightlight">RS</span>
+            </p>
+        </section>
+        <section id="parte-2">
+            <div class="texto1">
+                <h2>Como você pode ajudar?</h2>
+                <h4> Aqui reunimos informações de locais que servem de abrigos e pontos <br> coleta em todo estado. Você escolhe a melhor forma de ajudar. </h4>
+                <br>
+                <ul>
+                    <li>Faça sua doação por PIX</li>
+                    <li>leve sua doação num local próximo a você</li>
+                </ul>
+                <br>
+                <button class="butaum" onclick="openInNewTab('https://sosenchentes.rs.gov.br/sobre-o-pix')">Clique aqui para doar</button>
+                <script>
+                    function openInNewTab(url) {
+                        window.open(url, '_blank'). focus();    
+                    }
+                </script>
             </div>
             <img class="img-doacao" src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/doacaoimagem.png" alt="Jovem com cesta escrita doação">
-</main>
-
-<aside>
-  <div-text>
-    <h1 class="texto-centro">Entidades que apoiam esta causa</h1>
-  </div-text>
-   
-    <section class="imagensDoIndex">
-      <div class="container">      
-        <div class ="item">1
-            <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/image%204.png" alt="CNBB" id="cnbb" height="80px">  
-        </div>
-        <div class ="item">2                     
-        </div>
-        <div class ="item">3           
-        </div>
-        <div class ="item">4
-            <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/growth.png" alt="Growth" id="growth" height="160px" width="200px">
-        </div>
-        <div class ="item">5
+        </section>
+        <section class="container-geral">   
+            <h2>Entidades que apoiam esta causa</h2>
+            <div id="container-superior">
+                <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/image%204.png" alt="CNBB" height="80px">  
+                <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/growth.png" alt="Growth" height="160px" width="200px">
+                <img src="https://github.com/shirleipeixoto/PortalClimaRS/blob/main/assets/OngDoar.png?raw=true" alt="ONG Doar" width="150px">
+                <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/proz.png" alt="PROZ" width="140px">
             </div>
-        <div class ="item">6
-            </div>
-        <div class ="item">7
-            <img src="https://github.com/shirleipeixoto/PortalClimaRS/blob/main/assets/OngDoar.png?raw=true" alt="ONG Doar" id="ongdoar" width="150px">
-        </div>
-        <div class ="item">8</div>
-        <div class ="item">9
-           
-        </div>
-        <div class ="item">10
-            <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/proz.png" alt="PROZ" id="proz" width="140px">
-        </div>
-        <div class ="item">11           
-        </div>
-        <div class ="item">12</div>
-        <div class ="item">13
-            <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/riot%20games.png" alt="Riot Games" id="riot" height="60px">
-        </div>
-        <div class ="item">14</div>
-        <div class ="item">15
-           
-        </div>
-        <div class ="item">16
-            <img src="https://github.com/shirleipeixoto/PortalClimaRS/blob/main/assets/luzdivina.png?raw=true" alt="Luz Divina" id="luzdivina" height="90px">
-        </div>  
-        <div class ="item">17</div>
-        <div class ="item">18
-            <img src="https://ongsoscidadaniaanimal.org/images/site/logo-sobre-a-ong.png" alt="ongsos" id="ongsos" height="90px">
-        </div>
-        <div class ="item">19         
-        </div>
-        <div class ="item">20
-            <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/doacaodesangue.png" alt="Doação Sangue" id="doasangue" height="100px" width="125px">
-        </div>          
-    </div>
-
+            <div id="container-inferior">
+                <img src="https://raw.githubusercontent.com/shirleipeixoto/PortalClimaRS/main/assets/riot%20games.png" alt="Riot Games" height="60px">
+                <img src="https://github.com/shirleipeixoto/PortalClimaRS/blob/main/assets/luzdivina.png?raw=true" alt="Luz Divina" height="90px">
+                <img src="https://ongsoscidadaniaanimal.org/images/site/logo-sobre-a-ong.png" alt="ongsos" height="90px">
+            </div>       
+        </section>
+    </main>
     <footer>
         <div class="footer">
             <section id="footerfeio">
