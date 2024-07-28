@@ -14,6 +14,8 @@
     <script type="module" src="/src/js/alertas.js"></script>
     <script src="/src/js/config.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.AwesomeMarkers/2.0.2/leaflet-awesome-markers.css"/>
+    <link rel="icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -62,7 +64,28 @@
                         <p>Butía</p>
                     </div>
                 </div>
-            <button class="expandir-btn">...</button>
+            <button class="expandir-btn" id="modalBtn">...</button>
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <span class="close-btn" id="closeBtn">&times;</span>
+                    <div class="element-principal">
+                        <h3>Gravidade</h3>
+                        <h3>Cidade</h3>
+                    </div>
+                    <div class="element-secundario">
+                        <div class="gravidades">
+                            <p class="gravidade-alta">Alta</p>
+                            <p class="gravidade-baixa">Baixa</p>
+                            <p class="gravidade-media">Média</p>
+                        </div>
+                        <div class="cidade">
+                            <p>Taquari</p>
+                            <p>Lajeado</p>
+                            <p>Butía</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <span class="pedaco">Deslizamento</span>
                 <div class="element-principal">
                     <h3>Gravidade</h3>

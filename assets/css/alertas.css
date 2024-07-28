@@ -129,7 +129,6 @@ span {
     justify-content: center;
 }
 
-
 .element-principal {
     display: flex;
     background-color: #007bff;
@@ -156,6 +155,58 @@ span {
     cursor: pointer;
     padding: 5px;
     border-top: 1px solid #000;
+}
+
+/* modal box (pop-up) */
+.modal {
+    display: none;
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 1000; /* Acima do conteúdo normal */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+/* conteúdo do modal */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+/* botão de fechar */
+.close-btn {
+    position: absolute;
+    top: -3px;
+    right: -35px;
+    color: white;
+    cursor: pointer;
+    background-color: transparent; /* Fundo transparente */
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    line-height: 3;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/*Desativa o scroll na tela de fundo do modal */
+.no-scroll {
+    overflow: hidden;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
 }
 
 .gravidade-alta {

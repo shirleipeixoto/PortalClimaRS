@@ -83,3 +83,28 @@ document.addEventListener('DOMContentLoaded', function() {
   // Atualiza a visibilidade ao carregar o mapa
   updateMarkerVisibility();
 });
+
+// Seleção dos elementos
+const modal = document.getElementById("modal");
+const openBtn = document.querySelector(".expandir-btn");
+const closeBtn = document.getElementById("closeBtn");
+
+// Função para abrir o modal
+openBtn.addEventListener("click", () => {
+    modal.style.display = "block";
+    document.body.classList.add("no-scroll"); // Adiciona a classe para desativar o scroll
+});
+
+// Função para fechar o modal
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.classList.remove("no-scroll"); // Remove a classe para reativar o scroll
+});
+
+// Fecha o modal ao clicar fora dele
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+        document.body.classList.remove("no-scroll"); // Remove a classe para reativar o scroll
+    }
+});
