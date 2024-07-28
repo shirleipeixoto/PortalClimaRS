@@ -122,27 +122,21 @@ header {
     height: auto;
   }
   
-  .recomendacoes-seguranca {
-      text-align: 0;
-      justify-content: center;
-  }
-  
   main section h2 {
       text-align: center;
   
   }
   
-  
   /* Adicionando estilos básicos para botões e imagens */
-  button {
-      padding: 10px 20px;
-      margin-top: 10px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-  }
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
   
   button:hover {
       background-color: #0056b3;

@@ -10,14 +10,14 @@ let EventIcon = L.Icon.extend({
 });
 
 // Criando ícones para enchentes com diferentes graus
-let aguaLeve = new EventIcon({iconUrl: '../../assets/flooded-housegreen.png'});
-let aguaModerada = new EventIcon({iconUrl: '../../assets/flooded-houseorange.png'});
-let aguaSevera = new EventIcon({iconUrl: '../../assets/floodRed.png'});
+let aguaLeve = new EventIcon({iconUrl: '../../assets/img/flooded-housegreen.png'});
+let aguaModerada = new EventIcon({iconUrl: '../../assets/img/flooded-houseorange.png'});
+let aguaSevera = new EventIcon({iconUrl: '../../assets/img/floodRed.png'});
 
 // Criando ícones para deslizamentos com diferentes graus
-let DeslizamentoLeve = new EventIcon({iconUrl: '../../assets/landslidegreen.png'});
-let DeslizamentoModerado = new EventIcon({iconUrl: '../../assets/landslideorange.png'});
-let DeslizamentoSevero = new EventIcon({iconUrl: '../../assets/landslidered.png'});
+let DeslizamentoLeve = new EventIcon({iconUrl: '../../assets/img/landslidegreen.png'});
+let DeslizamentoModerado = new EventIcon({iconUrl: '../../assets/img/landslideorange.png'});
+let DeslizamentoSevero = new EventIcon({iconUrl: '../../assets/img/landslidered.png'});
 
 
 document.addEventListener('DOMContentLoaded', function() {
