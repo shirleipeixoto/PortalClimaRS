@@ -42,15 +42,19 @@
             <form method="post" action="http://localhost:8000/enviar.php" id="formulario">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required placeholder="Nome">
+                <span class="error-message" id="nome-error" style="display:none;">Nome é obrigatório e deve ter pelo menos 3 caracteres.</span>
                 <br>
                 <label for="sobrenome">Sobrenome:</label>
                 <input type="text" id="sobrenome" name="sobrenome" required placeholder="Sobrenome">
+                <span class="error-message" id="sobrenome-error" style="display:none;">Sobrenome é obrigatório e deve ter pelo menos 3 caracteres.</span>
                 <br>
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required placeholder="email@gmail.com">
+                <span class="error-message" id="email-error" style="display:none;">Por favor, insira um email válido.</span>
                 <br>
                 <label for="mensagem">Sua mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Mensagens, dúvidas ou sugestões para a equipe do portal."></textarea>
+                <span class="error-message" id="mensagem-error" style="display:none;">Mensagem é obrigatória, deve conter no mínimo 20 caracteres e não pode conter palavras ofensivas.</span>
                 <br>
                 <button type="submit">Enviar</button>
             </form>

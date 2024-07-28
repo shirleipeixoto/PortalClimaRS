@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('formulario');
-
+    const ofensa = ["ignóbil", "merda", "caralho", "Alvin", "flamengo", "porra", "fuder"]; 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         let isValid = true;
 
+        // Remove mensagens de erro anteriores
         const errorMessages = document.querySelectorAll('.error-message');
         errorMessages.forEach((msg) => msg.style.display = 'none');
 
-        // validação de nome
+        // Validação de nome
         const nome = document.getElementById('nome');
-        if (nome.value.trim() === '') {
+        if (nome.value.trim().length < 3) {
             nome.classList.add('error');
             document.getElementById('nome-error').style.display = 'block';
             isValid = false;
@@ -19,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
             nome.classList.add('success');
         }
 
-        // validação de sobrenome
+        // Validação de sobrenome
         const sobrenome = document.getElementById('sobrenome');
-        if (sobrenome.value.trim() === '') {
+        if (sobrenome.value.trim().length < 3) {
             sobrenome.classList.add('error');
             document.getElementById('sobrenome-error').style.display = 'block';
             isValid = false;
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
             sobrenome.classList.add('success');
         }
 
-        // validação de email
+        // Validação de email
         const email = document.getElementById('email');
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (!emailPattern.test(email.value.trim())) {
@@ -42,9 +43,18 @@ document.addEventListener("DOMContentLoaded", function() {
             email.classList.add('success');
         }
 
-        // validação de mensagem
+        // Validação de mensagem
         const mensagem = document.getElementById('mensagem');
-        if (mensagem.value.trim() === '') {
+        const mensagemValue = mensagem.value.trim();
+        let containsOffensiveWord = false;
+
+        ofensa.forEach(word => {
+            if (mensagemValue.toLowerCase().includes(word.toLowerCase())) {
+                containsOffensiveWord = true;
+            }
+        });
+
+        if (mensagemValue.length < 20 || containsOffensiveWord) {
             mensagem.classList.add('error');
             document.getElementById('mensagem-error').style.display = 'block';
             isValid = false;

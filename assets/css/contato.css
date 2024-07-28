@@ -122,7 +122,7 @@ h1 {
   margin-bottom: 20px; 
 }
   
-  /* Formulário de contato */
+/* Formulário de contato */
 #formulario {
   width: 400px;
   padding: 30px;
@@ -178,8 +178,9 @@ button[type="submit"]:hover {
 .error-message {
   color: red;
   font-size: 12px;
-  display: none;
-} 
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
   
 /* Rodapé */
 footer {

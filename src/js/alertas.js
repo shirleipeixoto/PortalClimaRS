@@ -84,27 +84,52 @@ document.addEventListener('DOMContentLoaded', function() {
   updateMarkerVisibility();
 });
 
-// Seleção dos elementos
-const modal = document.getElementById("modal");
-const openBtn = document.querySelector(".expandir-btn");
-const closeBtn = document.getElementById("closeBtn");
+// Seleção dos elementos para o primeiro modal
+const modal1 = document.getElementById("modal1");
+const openBtn1 = document.getElementById("modalBtn1");
+const closeBtn1 = document.getElementById("closeBtn1");
 
-// Função para abrir o modal
-openBtn.addEventListener("click", () => {
-    modal.style.display = "block";
-    document.body.classList.add("no-scroll"); // Adiciona a classe para desativar o scroll
+// Função para abrir o primeiro modal
+openBtn1.addEventListener("click", () => {
+    modal1.style.display = "block";
+    document.body.classList.add("no-scroll"); // Desativa o scroll da página
 });
 
-// Função para fechar o modal
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    document.body.classList.remove("no-scroll"); // Remove a classe para reativar o scroll
+// Função para fechar o primeiro modal
+closeBtn1.addEventListener("click", () => {
+    modal1.style.display = "none";
+    document.body.classList.remove("no-scroll"); // Reativa o scroll da página
 });
 
-// Fecha o modal ao clicar fora dele
+// Fecha o primeiro modal ao clicar fora dele
 window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-        document.body.classList.remove("no-scroll"); // Remove a classe para reativar o scroll
+    if (event.target === modal1) {
+        modal1.style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+});
+
+// Seleção dos elementos para o segundo modal
+const modal2 = document.getElementById("modal2");
+const openBtn2 = document.getElementById("modalBtn2");
+const closeBtn2 = document.getElementById("closeBtn2");
+
+// Função para abrir o segundo modal
+openBtn2.addEventListener("click", () => {
+    modal2.style.display = "block";
+    document.body.classList.add("no-scroll");
+});
+
+// Função para fechar o segundo modal
+closeBtn2.addEventListener("click", () => {
+    modal2.style.display = "none";
+    document.body.classList.remove("no-scroll");
+});
+
+// Fecha o segundo modal ao clicar fora dele
+window.addEventListener("click", (event) => {
+    if (event.target === modal2) {
+        modal2.style.display = "none";
+        document.body.classList.remove("no-scroll");
     }
 });
