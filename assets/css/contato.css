@@ -116,13 +116,11 @@ main {
   align-items: center;
 }
 
-  #imagemContato {
-    width: 300px;
-    height: 400px;
-    margin-bottom: 20px; 
-  }
-
-  
+#imagemContato {
+  width: 300px;
+  height: 400px;
+  margin-bottom: 20px; 
+}
   
   /* Formulário de contato */
 #formulario {
@@ -134,49 +132,63 @@ main {
   background-color: white;
 }
   
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-  }
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+main input, textarea {
+  width: calc(100% - 22px);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #4169E1;
+}
+
+.error {
+  border-color: red;
+}
+
+.success {
+  border-color: green;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+} 
   
-  main input, textarea {
-    width: calc(100% - 22px);
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #4169E1;
-  }
-  
-  /* Rodapé */
-  footer {
-    background-color: #007bff;
-    height: 140px;  
-    width: 100%;
-    position: relative;
-    color: white;
-    overflow: hidden;
+/* Rodapé */
+footer {
+  background-color: #007bff;
+  height: 140px;  
+  width: 100%;
+  position: relative;
+  color: white;
+  overflow: hidden;
 }
 
 .footer {
