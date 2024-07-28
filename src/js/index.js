@@ -1,4 +1,4 @@
-// para selecionar todas as imagens no documento
+// para selecionar todas as imagens do meu html (melhor)
 const images = document.querySelectorAll('img');
 
 // imprimi-las no console para...
