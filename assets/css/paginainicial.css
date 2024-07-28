@@ -184,7 +184,7 @@ main {
 }
 
  /* Footer */
- footer {
+footer {
   background-color: #007bff;
   height: 140px;  
   width: 100%;
@@ -200,6 +200,7 @@ main {
   justify-content: space-around;
   padding: 10px 20px;
   height: 100%;
+  width: 100%;
 }
 
 #qrcode {
@@ -227,8 +228,8 @@ main {
 
 .elementsfooter img {
   margin-right: 10px;
-  height: 20px; 
-  width: 20px;   
+  height: 30px; 
+  width: 30px;   
 }
 
 .elementsfooter h3 {
@@ -248,9 +249,9 @@ main {
 
 .diagonal-line {
   position: absolute;
-  width: 1px;
+  width: 2px;
   background-color: rgb(0, 0, 0);
-  height: 180px; 
+  height: 100%; 
 }
 
 .diagonal-line.left {
