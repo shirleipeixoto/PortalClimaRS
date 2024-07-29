@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prevenções</title>
     <link rel="stylesheet" href="../../assets/css/prevencoes.css">
-    <link rel="icon" href="../../assets/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+    <script src="/src/js/prevencoes.js" defer></script>
 </head>
 <body>
     <header>
         <p id="faixa-do-header">O Rio Grande do Sul Precisa de Ajuda.</p>   
         <div class="header-top">
             <a href="index.html" class="logo">
-                <img src="/assets/img/logo.png" alt="logo">
+                <img src="/assets/logo.png" alt="logo">
             </a>
             <section id="barra-de-pesquisa">
-                <img src="/assets/img/lupa.png" alt="lupa De Pesquisa">
+                <img src="/assets/lupa.png" alt="lupa De Pesquisa">
                 <input type="text" placeholder="Pesquisar" alt="Barra De Pesquisa">
             </section>
         </div>
@@ -32,22 +31,23 @@
             </nav>
         </div>
     </header>
-    <main>
-        <section class="prevencao-tipos">
+    <main class="container">
+        <div class="carrossel">
+        <section class="carrossel-item prevencao-tipos">
             <h1>Dicas de Prevenção</h1>
-                <img src="/assets/img/prev.jpg" alt="prev">
+                <img src="/assets/prev.jpg" alt="prev">
             <h3>Quais medidas poderiam ter sido tomadas para evitar tragédia no RS?</h3>
             <a href="https://www.otempo.com.br/brasil/2024/5/7/quais-medidas-poderiam-ser-tomadas-para-evitar-tragedia-no-rs-">
                 <button>Ler mais</button>
             </a>    
         </section>
-        <section class="recomendacoes-seguranca">
+        <section class="carrossel-item recomendacoes-seguranca">
             <h2>Recomendações de segurança</h2>
-            <h3><b>Saiba o que fazer em caso de chuva e alagamentos</b></h3>
+            <p ><b>Saiba o que fazer em caso de chuva e alagamentos</b></p>
             <p>Em situações de chuvas intensas e risco de alagamento, é fundamental que moradores de zonas suscetíveis a cheias adotem medidas preventivas
                 para evitar situações de risco à vida e dados ao patrimônio.</p>
-            <p>Confira algumas dicas importantes:</p>    
-            <ul>
+            <p><b>Confira algumas dicas importantes:</b></p>    
+            <ul id="texto1">
                 <li>Se puder, permaneça em casa;</li>
                 <li>Esteja atento aos boletins meteorológicos e alertas de emergência emitidos pelo Estado;</li>
                 <li>Siga as instruções das autoridades locais e utilize as rotas de evacuação recomendadas;</li>
@@ -59,8 +59,7 @@
                 <li>Se ficar isolado em local inseguro, chame imediatamente o Corpo de Bombeiros (193);</li>
                 <li>Encha recipientes com água potável para uso em caso de interrupção no fornecimento.</li>
             </ul>
-
-            <h3><b>O que fazer se estiver dirigindo durante uma inundação?</b></h3>
+            <p><b>O que fazer se estiver dirigindo durante uma inundação?</b></p> 
             <ul>
                 <li>Não enfrente cursos de agua com correnteza, pois você e seu veículo podem ser arrastados;</li>
                 <li>Caso seja surpreendido por uma inundação, fique atento ao nível de água observando os demais veículos:</li>
@@ -72,35 +71,38 @@
             <button>Video com orientações da Defesa Civil</button>
             </a>
         </section>
+    </div>
+    <button class="carrossel-control-prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carrossel-control-next" onclick="nextSlide()">&#10095;</button>
     </main>
     <footer>
         <div class="footer">
             <section id="footerfeio">
                 <div class="elementsfooter">
                     <a href="https://www.youtube.com/watch?v=FAQl64vIRG8">
-                        <img src="/assets/img/redeSocial.png" alt="Redes Sociais">
+                        <img src="/assets/redeSocial.png" alt="Redes Sociais">
                         <h3>Redes Sociais</h3>
                     </a>
                 </div>
                 <div class="elementsfooter">
                     <a href="./sobre.html">
-                        <img src="/assets/img/sobreNos.png" alt="Sobre Nós">
+                        <img src="/assets/sobreNos.png" alt="Sobre Nós">
                         <h3>Sobre Nós</h3>
                     </a>
                 </div>
                 <div class="elementsfooter">
                     <a href="https://www.youtube.com/watch?v=FAQl64vIRG8">
-                        <img src="/assets/img/contato.png" alt="Contato">
+                        <img src="/assets/contato.png" alt="Contato">
                         <h3>Contato</h3>
                     </a>
                 </div>
             </section>
             <div class="middle-section">
-                <img src="/assets/img/bandeiraRioGrande.png" alt="Bandeira do Rio Grande do Sul" id="bandeira">
+                <img src="/assets/bandeiraRioGrande.png" alt="Bandeira do Rio Grande do Sul" id="bandeira">
                 <p>Copyright ©2024 Portal Do Clima RS</p>
             </div>
             <div class="qrcode-section">
-                <img src="/assets/img/qrCode.png" alt="QR Code" id="qrcode">
+                <img src="/assets/qrCode.png" alt="QR Code" id="qrcode">
             </div>
         </div>
         <div class="diagonal-line left"></div>
