@@ -1,9 +1,10 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$config = require 'config.php';
-require 'vendor/autoload.php';
+$config = require_once 'config.php';
+require_once 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 
@@ -18,10 +19,10 @@ try {
     $mail->Port = 587;
 
     // Capturar dados do formulário
-    $nome = filter_var($_POST['nome']);
-    $sobrenome = filter_var($_POST['sobrenome']);
+    $nome = htmlspecialchars($_POST['nome'], ENT_QUOTES, 'UTF-8');
+    $sobrenome = htmlspecialchars($_POST['sobrenome'], ENT_QUOTES, 'UTF-8');
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $mensagem = filter_var($_POST['mensagem']);
+    $mensagem = htmlspecialchars($_POST['mensagem'], ENT_QUOTES, 'UTF-8');
 
     // Verificar se o e-mail é válido
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
