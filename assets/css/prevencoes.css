@@ -89,20 +89,21 @@ header {
 }
 
 /*mains*/
+main {
+    background-color: #e9e9e9;
+}
+
 .container {
     position: relative;
-    width: 100%;
     margin: auto;
     overflow: hidden;
-    padding: 80px;
     display: flex;
     justify-content: space-between;
     padding: 50px;
     width: 100%;
-    background-color: #e9e9e9;
-  }
+}
 
-  .carrossel {
+.carrossel {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -142,7 +143,11 @@ header {
     margin: 10px;
     border-radius: 8px;
     background-color: white;
-  }
+}
+
+#imagem-prevencao {
+    height: 85%;
+}
 
  #texto1{
     display: flex;
@@ -153,10 +158,9 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-color: rgb(235, 233, 233);
-  }
+}
 
-
-  .prevencao-tipos {
+.prevencao-tipos {
     display: flex;
     flex: 1;
     flex-direction:column;
@@ -167,19 +171,18 @@ header {
     margin: 10px;
     border-radius: 8px;
     background-color: white;
-  }
+}
 
-  .prevencao-tipos img {
+.prevencao-tipos img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
     height: auto;
-  }
+}
   
-  
-  /* Adicionando estilos básicos para botões e imagens */
-  button {
+/* Adicionando estilos básicos para botões e imagens */
+button {
       padding: 10px 20px;
       margin-top: 10px;
       background-color: #007BFF;
@@ -187,17 +190,14 @@ header {
       border: none;
       cursor: pointer;
       border-radius: 5px;
-  }
+}
   
-  button:hover {
+button:hover {
       background-color: #0056b3;
-  }
-  
+}
 
-
-  footer {
-    background-color: #007bff;
-    height: 140px;  
+footer {
+    background-color: #007bff;  
     width: 100%;
     position: relative;
     color: white;
@@ -210,12 +210,13 @@ header {
     align-items: center;
     justify-content: space-around;
     padding: 10px 20px;
+    width: 100%;
     height: 100%;
 }
 
 #qrcode {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
 }
 
 #bandeira {
@@ -238,8 +239,8 @@ header {
 
 .elementsfooter img {
     margin-right: 10px;
-    height: 20px; 
-    width: 20px;   
+    height: 30px; 
+    width: 30px;   
 }
 
 .elementsfooter h3 {
@@ -259,9 +260,9 @@ header {
 
 .diagonal-line {
     position: absolute;
-    width: 1px;
+    width: 2px;
     background-color: rgb(0, 0, 0);
-    height: 180px; 
+    height: 100%; 
 }
 
 .diagonal-line.left {
