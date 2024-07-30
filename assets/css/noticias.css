@@ -87,6 +87,10 @@ header {
     color: white;
 }
 
+.highlight {
+    background-color: yellow;
+}
+
 /* Main */
 
 main {

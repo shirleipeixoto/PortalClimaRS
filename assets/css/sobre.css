@@ -100,3 +100,7 @@ html, body {
     font-style: italic; /* Itálico */
     color: #007bff; /* Cor azul */
 }
+
+.hightlight {
+    background-color: yellow;
+}

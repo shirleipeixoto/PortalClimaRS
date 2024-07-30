@@ -28,57 +28,57 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentIndex);
 });
 
+// ferramenta de busca
+document.addEventListener('DOMContentLoaded', () => {
+  const searchBar = document.getElementById('search-bar');
+  const searchIcon = document.getElementById('search-icon');
+  const clearIcon = document.getElementById('clear-icon');
+  const conteudo = document.getElementsByClassName('conteudo');
 
-/*const box = document.querySelector(".container");
-const sections = document.querySelector(".container section")
+  function filtrarResultados() {
+      const termoDeBusca = searchBar.value.toLowerCase();
+      const paragrafos = conteudo.getElementsByTagName('p');
+      let primeiroResultado = null;
 
-let contador = 0
+      for (let item of paragrafos) {
+          item.classList.remove('highlight');
+      }
 
-function slider() {
-    contador++;
+      if (termoDeBusca.trim() === '') {
+          return;
+      }
 
-    if (contador > sections.length - 1){
-      contador = 0;
-    }
+      for (let item of paragrafos) {
+          if (item.textContent.toLowerCase().includes(termoDeBusca)) {
+              item.classList.add('highlight');
+              if (!primeiroResultado) {
+                  primeiroResultado = item;
+              }
+          }
+      }
 
-    box.style.transform = `translateX(${-contador * 1250}px)`;
+      if (primeiroResultado) {
+          primeiroResultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+          alert('Nenhum resultado encontrado.');
+      }
   }
 
-  setInterval(slider, 2000)
+  function limparResultados() {
+      searchBar.value = '';
 
-
-
-
-/*const logotipo = document.getElementById("logo")
-console.log(logotipo)
-
-const req_seg = document.getElementsByClassName("recomendacoes-seguranca")
-console.log(req_seg)
-
-
-
-const section = document.createElement('section')
-
-section.setAttribute('class', 'recomendacoes-seguranca')
-
-const main = document.querySelector('main')
-main.appendChild(section)
-
- 
-
-const chuva_situacao = document.getElementById("chuva_situacao");
-  const textoCompleto = "Em situações de chuvas intensas e risco de alagamento, é fundamental que moradores de zonas suscetíveis a cheias adotem medidas preventivas para evitar situações de risco à vida e dados ao patrimônio.";
-  let letraAtual = 0;
-
-  function digitar() {
-    if (letraAtual < textoCompleto.length) {
-        chuva_situacao.textContent += textoCompleto.charAt(letraAtual);
-      letraAtual++;
-      setTimeout(digitar, 50); // Ajuste o intervalo conforme desejado
-    }
+      const paragrafos = conteudo.getElementsByTagName('p');
+      for (let item of paragrafos) {
+          item.classList.remove('highlight');
+      }
   }
 
-  digitar();*/
- 
+  searchIcon.addEventListener('click', filtrarResultados);
+  searchBar.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+          filtrarResultados();
+      }
+  });
 
-  
+  clearIcon.addEventListener('click', limparResultados);
+}); 

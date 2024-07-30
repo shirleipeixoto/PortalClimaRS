@@ -88,6 +88,10 @@ header {
     color: white;
 }
 
+.highlight {
+    background-color: yellow;
+}
+
 /* Conteúdo Principal = Main */
 main {
     padding: 20px;
@@ -160,14 +164,14 @@ span {
 /* modal box (pop-up) */
 .modal {
     display: none;
-    position: fixed; /* Fixa o modal na tela */
-    z-index: 1000; /* Acima do conteúdo normal */
+    position: fixed;
+    z-index: 1000; /* Acima do conteudo */
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* conteúdo do modal */

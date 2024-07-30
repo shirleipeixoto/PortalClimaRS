@@ -89,6 +89,10 @@ header {
   color: white;
 }
 
+.highlight {
+  background-color: yellow;
+}
+
 /* Conteúdo principal (main) */
 main {
     padding: 20px;

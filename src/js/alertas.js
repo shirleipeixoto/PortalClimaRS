@@ -1,4 +1,3 @@
-// Definindo uma classe personalizada de ícone que estende L.Icon
 let EventIcon = L.Icon.extend({
   options: {
       iconSize:     [30, 30],
@@ -9,27 +8,22 @@ let EventIcon = L.Icon.extend({
   }
 });
 
-// Criando ícones para enchentes com diferentes graus
 let aguaLeve = new EventIcon({iconUrl: '../../assets/img/flooded-housegreen.png'});
 let aguaModerada = new EventIcon({iconUrl: '../../assets/img/flooded-houseorange.png'});
 let aguaSevera = new EventIcon({iconUrl: '../../assets/img/floodRed.png'});
 
-// Criando ícones para deslizamentos com diferentes graus
 let DeslizamentoLeve = new EventIcon({iconUrl: '../../assets/img/landslidegreen.png'});
 let DeslizamentoModerado = new EventIcon({iconUrl: '../../assets/img/landslideorange.png'});
 let DeslizamentoSevero = new EventIcon({iconUrl: '../../assets/img/landslidered.png'});
 
-
 document.addEventListener('DOMContentLoaded', function() {
   let map = L.map('map').setView([-30.0344, -51.2171], 10);
 
-  // Adicione o estilo Humanitarian do OpenStreetMap ou outro tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: 'Map data © OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team'
   }).addTo(map);
 
-  // Definindo os grupos de marcadores
   let markers = {
     aguaLeve: L.layerGroup(),
     aguaModerada: L.layerGroup(),
@@ -39,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     DeslizamentoSevero: L.layerGroup()
   };
 
-  // Adicionando marcadores aos grupos correspondentes
   L.marker([-29.9666, -51.2825], {icon: DeslizamentoSevero}).bindPopup("Porto Batista - Crítico").addTo(markers.DeslizamentoSevero);
   L.marker([-30.1083, -51.3237], {icon: DeslizamentoModerado}).bindPopup("Guaíba - Moderado").addTo(markers.DeslizamentoModerado);
   L.marker([-29.9296, -51.7181], {icon: DeslizamentoLeve}).bindPopup("Triunfo - Baixo").addTo(markers.DeslizamentoLeve);
@@ -54,11 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Função para atualizar a visibilidade dos marcadores com base no zoom
   function updateMarkerVisibility() {
     let zoom = map.getZoom();
 
-    // Definir os limites de zoom para mostrar ou ocultar os marcadores
     let zoomThresholds = {
       aguaLeve: 9,
       aguaModerada: 9,
@@ -70,17 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Object.keys(markers).forEach(function(key) {
       if (zoom < zoomThresholds[key]) {
-        map.removeLayer(markers[key]); // Remove os grupos de marcadores se o zoom for menor que o limite
+        map.removeLayer(markers[key]);
       } else { (!map.hasLayer(markers[key]))
-          markers[key].addTo(map); // Adiciona os grupos de volta se o zoom for maior que o limite
+          markers[key].addTo(map);
       }
     });
   }
 
-  // Adiciona o evento de zoom
   map.on('zoomend', updateMarkerVisibility);
 
-  // Atualiza a visibilidade ao carregar o mapa
   updateMarkerVisibility();
 });
 
@@ -89,19 +78,16 @@ const modal1 = document.getElementById("modal1");
 const openBtn1 = document.getElementById("modalBtn1");
 const closeBtn1 = document.getElementById("closeBtn1");
 
-// Função para abrir o primeiro modal
 openBtn1.addEventListener("click", () => {
     modal1.style.display = "block";
-    document.body.classList.add("no-scroll"); // Desativa o scroll da página
+    document.body.classList.add("no-scroll");
 });
 
-// Função para fechar o primeiro modal
 closeBtn1.addEventListener("click", () => {
     modal1.style.display = "none";
-    document.body.classList.remove("no-scroll"); // Reativa o scroll da página
+    document.body.classList.remove("no-scroll");
 });
 
-// Fecha o primeiro modal ao clicar fora dele
 window.addEventListener("click", (event) => {
     if (event.target === modal1) {
         modal1.style.display = "none";
@@ -109,27 +95,78 @@ window.addEventListener("click", (event) => {
     }
 });
 
-// Seleção dos elementos para o segundo modal
 const modal2 = document.getElementById("modal2");
 const openBtn2 = document.getElementById("modalBtn2");
 const closeBtn2 = document.getElementById("closeBtn2");
 
-// Função para abrir o segundo modal
 openBtn2.addEventListener("click", () => {
     modal2.style.display = "block";
     document.body.classList.add("no-scroll");
 });
 
-// Função para fechar o segundo modal
 closeBtn2.addEventListener("click", () => {
     modal2.style.display = "none";
     document.body.classList.remove("no-scroll");
 });
 
-// Fecha o segundo modal ao clicar fora dele
 window.addEventListener("click", (event) => {
     if (event.target === modal2) {
         modal2.style.display = "none";
         document.body.classList.remove("no-scroll");
     }
+});
+
+// ferramenta de busca
+document.addEventListener('DOMContentLoaded', () => {
+  const searchBar = document.getElementById('search-bar');
+  const searchIcon = document.getElementById('search-icon');
+  const clearIcon = document.getElementById('clear-icon');
+  const conteudo = document.getElementById('conteudo');
+
+  function filtrarResultados() {
+      const termoDeBusca = searchBar.value.toLowerCase();
+      const paragrafos = conteudo.getElementsByTagName('p');
+      let primeiroResultado = null;
+
+      for (let item of paragrafos) {
+          item.classList.remove('highlight');
+      }
+
+      if (termoDeBusca.trim() === '') {
+          return;
+      }
+
+      for (let item of paragrafos) {
+          if (item.textContent.toLowerCase().includes(termoDeBusca)) {
+              item.classList.add('highlight');
+              if (!primeiroResultado) {
+                  primeiroResultado = item;
+              }
+          }
+      }
+
+      if (primeiroResultado) {
+          primeiroResultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+          alert('Nenhum resultado encontrado.');
+      }
+  }
+
+  function limparResultados() {
+      searchBar.value = '';
+
+      const paragrafos = conteudo.getElementsByTagName('p');
+      for (let item of paragrafos) {
+          item.classList.remove('highlight');
+      }
+  }
+
+  searchIcon.addEventListener('click', filtrarResultados);
+  searchBar.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+          filtrarResultados();
+      }
+  });
+
+  clearIcon.addEventListener('click', limparResultados);
 });
