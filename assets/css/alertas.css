@@ -34,22 +34,14 @@ header {
 }
 
 .logo img {
-    height: 60px; 
+    height: 20px;
+    width: 230px;
 }
 
-#barra-de-pesquisa {
-    display: flex;
-    cursor: pointer;
-}
-
-#barra-de-pesquisa img {
-    height: 20px; 
-    margin-right: 10px;
-}
-
-#barra-de-pesquisa input {
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#mode-icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
 }
 
 /* navbar = barra de navegação*/
