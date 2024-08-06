@@ -1,0 +1,121 @@
+/* Estilos gerais */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode a {
+    color: #bb86fc;
+}
+
+/* Cabeçalho */
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode #faixa-do-header {
+    background-color: #3700b3;
+    color: #e0e0e0;
+}
+
+#logo-trocar {
+    height: 20px;
+    width: 230px;
+    margin: 5px;
+}
+
+/* Navbar */
+body.dark-mode .navbar ul li a {
+    color: #e0e0e0;
+    background-color: transparent;
+}
+
+body.dark-mode .navbar ul li a:hover, 
+body.dark-mode .navbar ul li a:focus {
+    background-color: #333;
+}
+
+body.dark-mode .navbar ul li a[href="contato.html"] {
+    background-color: #6200ee;
+    color: #ffffff;
+}
+
+/* Conteúdo Principal */
+body.dark-mode main {
+    background-color: rgb(50, 50, 50);
+}
+
+/* Título */
+body.dark-mode h1 {
+    color: #e0e0e0;
+}
+
+/* Formulário de contato */
+body.dark-mode #formulario {
+    background-color: #333;
+}
+
+body.dark-mode #formulario label {
+    color: white;
+}
+
+body.dark-mode #formulario button {
+    background-color: #3700b3;
+}
+
+body.dark-mode #formulario button:hover{
+    background-color: #270576;
+}
+
+body.dark-mode #map {
+    background-color: #3700b3;
+}
+
+body.dark-mode .pedaco,
+body.dark-mode span,
+body.dark-mode .element-principal {
+    color: #e0e0e0;
+}
+
+body.dark-mode .element-secundario,
+body.dark-mode .expandir-btn {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #3700b3;
+}
+
+/* Rodapé */
+body.dark-mode footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.dark-mode .elementsfooter a {
+    color: #ffffff;
+}
+
+body.dark-mode .elementsfooter img {
+    filter: brightness(0.8);
+}
+
+body.dark-mode .diagonal-line {
+    background-color: #bb86fc;
+}
+
+#modo-noturno {
+    text-align: right;
+    padding: 5px;
+    margin-right: 17px;
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#dark-mode-toggle img {
+    width: 40px; 
+    height: 40px; 
+}  

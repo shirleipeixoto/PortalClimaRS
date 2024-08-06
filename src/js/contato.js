@@ -67,59 +67,36 @@ document.addEventListener("DOMContentLoaded", function() {
             form.submit();
         }
     });
-});
 
-// ferramenta de busca
-document.addEventListener('DOMContentLoaded', () => {
-    const searchBar = document.getElementById('search-bar');
-    const searchIcon = document.getElementById('search-icon');
-    const clearIcon = document.getElementById('clear-icon');
-    const conteudo = document.getElementById('conteudo');
-  
-    function filtrarResultados() {
-        const termoDeBusca = searchBar.value.toLowerCase();
-        const paragrafos = conteudo.getElementsByTagName('p');
-        let primeiroResultado = null;
-  
-        for (let item of paragrafos) {
-            item.classList.remove('highlight');
-        }
-  
-        if (termoDeBusca.trim() === '') {
-            return;
-        }
-  
-        for (let item of paragrafos) {
-            if (item.textContent.toLowerCase().includes(termoDeBusca)) {
-                item.classList.add('highlight');
-                if (!primeiroResultado) {
-                    primeiroResultado = item;
-                }
-            }
-        }
-  
-        if (primeiroResultado) {
-            primeiroResultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Modo noturno
+    document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+        const body = document.body;
+        const modeIcon = document.getElementById('mode-icon');
+        const socialIcon = document.getElementById('social-icon');
+        const aboutIcon = document.getElementById('about-icon');
+        const contactIcon = document.getElementById('contact-icon');
+        const logoIcon = document.getElementById('logo-trocar')
+
+        // Alterna a classe 'dark-mode'
+        body.classList.toggle('dark-mode');
+        
+        // Atualiza o ícone do modo noturno
+        if (body.classList.contains('dark-mode')) {
+            modeIcon.src = '../../assets/img/sun.png';
+            modeIcon.alt = 'Desativar Modo Noturno';
+            // Atualiza os ícones do rodapé para o modo noturno
+            if (socialIcon) socialIcon.src = '../../assets/img/redessociaisnoturno.png'; 
+            if (aboutIcon) aboutIcon.src = '../../assets/img/sobrenosnoturno.png';
+            if (contactIcon) contactIcon.src = '../../assets/img/contatonoturno.png';
+            if (logoIcon) logoIcon.src = '../../assets/img/portalClimaNoturno.png';
         } else {
-            alert('Nenhum resultado encontrado.');
-        }
-    }
-  
-    function limparResultados() {
-        searchBar.value = '';
-  
-        const paragrafos = conteudo.getElementsByTagName('p');
-        for (let item of paragrafos) {
-            item.classList.remove('highlight');
-        }
-    }
-  
-    searchIcon.addEventListener('click', filtrarResultados);
-    searchBar.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            filtrarResultados();
+            modeIcon.src = '../../assets/img/moon.png';
+            modeIcon.alt = 'Ativar Modo Noturno';
+            // Atualiza os ícones do rodapé para o modo claro
+            if (socialIcon) socialIcon.src = '../../assets/img/redeSocial.png';
+            if (aboutIcon) aboutIcon.src = '../../assets/img/sobreNos.png';
+            if (contactIcon) contactIcon.src = '../../assets/img/contato.png';
+            if (logoIcon) logoIcon.src = '../../assets/img/logo2.png'
         }
     });
-  
-    clearIcon.addEventListener('click', limparResultados);
-  });
+});
