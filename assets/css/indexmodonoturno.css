@@ -47,7 +47,7 @@ body.dark-mode main {
     background-color: rgb(50, 50, 50);
 }
 
-.butaum {
+body.dark-mode .butaum {
     margin-left: 180px;
     background-color: #3700b3;
     height: 40px;
@@ -59,7 +59,7 @@ body.dark-mode main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
   
-.butaum:hover {
+body.dark-mode .butaum:hover {
     background-color: darkblue;
     transform: scale(1.05);
 }

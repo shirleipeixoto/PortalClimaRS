@@ -77,11 +77,11 @@ body.dark-mode main {
     box-shadow: 0 0 10px rgba(55, 0, 179, 0.5); /* Sombra roxa */
 }
 
-button {
+.dark-mode button {
     background-color: #3700b3;
 }
 
-button:hover {
+.dark-mode button:hover {
     background-color: #270576;
 }
 
