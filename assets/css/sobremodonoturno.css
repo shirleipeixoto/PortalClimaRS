@@ -1,3 +1,5 @@
+/* dark-mode.css */
+
 /* Estilos gerais */
 body.dark-mode {
     background-color: #121212;
@@ -35,36 +37,13 @@ body.dark-mode .navbar ul li a:focus {
     background-color: #333;
 }
 
-body.dark-mode .navbar ul li a[href="contato.html"] {
-    background-color: #6200ee;
-    color: #ffffff;
-}
-
 /* Conteúdo Principal */
 body.dark-mode main {
     background-color: rgb(50, 50, 50);
 }
 
-/* Título */
-body.dark-mode h1 {
-    color: #e0e0e0;
-}
-
-/* Formulário de contato */
-body.dark-mode #formulario {
-    background-color: #333;
-}
-
-body.dark-mode #formulario label {
-    color: white;
-}
-
-body.dark-mode #formulario button {
-    background-color: #3700b3;
-}
-
-body.dark-mode #formulario button:hover{
-    background-color: #270576;
+body.dark-mode article {
+    background-color: rgb(50, 50, 50);
 }
 
 /* Rodapé */
@@ -101,4 +80,4 @@ body.dark-mode .diagonal-line {
 #dark-mode-toggle img {
     width: 40px; 
     height: 40px; 
-}  
+}

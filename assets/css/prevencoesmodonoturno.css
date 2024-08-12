@@ -1,3 +1,5 @@
+/* dark-mode.css */
+
 /* Estilos gerais */
 body.dark-mode {
     background-color: #121212;
@@ -35,7 +37,7 @@ body.dark-mode .navbar ul li a:focus {
     background-color: #333;
 }
 
-body.dark-mode .navbar ul li a[href="contato.html"] {
+body.dark-mode .navbar ul li a[href="prevencoes.html"] {
     background-color: #6200ee;
     color: #ffffff;
 }
@@ -45,27 +47,44 @@ body.dark-mode main {
     background-color: rgb(50, 50, 50);
 }
 
-/* Título */
-body.dark-mode h1 {
-    color: #e0e0e0;
+/* Carrosel */
+
+/* Modo noturno */
+.dark-mode .carrossel-control-prev, .dark-mode .carrossel-control-next {
+    background-color: rgba(55, 0, 179, 0.8); /* Cor roxa para os controles do carrossel */
+    box-shadow: 0 0 10px rgba(55, 0, 179, 0.5); /* Sombra roxa */
 }
 
-/* Formulário de contato */
-body.dark-mode #formulario {
-    background-color: #333;
+.dark-mode .carrossel-control-prev:hover, .dark-mode .carrossel-control-next:hover {
+    background-color: rgba(39, 5, 118, 0.8); /* Hover do botão roxo */
+    box-shadow: 0 0 10px rgba(39, 5, 118, 0.5); /* Sombra do botão hover roxa */
 }
 
-body.dark-mode #formulario label {
-    color: white;
+.dark-mode .carrossel-item {
+    background-color: rgb(50, 50, 50); /* Fundo escuro para itens do carrossel */
+    color: white; /* Texto branco */
 }
 
-body.dark-mode #formulario button {
+.dark-mode .prevencao-tipos, .dark-mode .recomendacoes-seguranca {
+    background-color: rgb(60, 60, 60); /* Fundo mais escuro para os itens de carrossel */
+    color: white; /* Texto branco */
+    box-shadow: 0 0 10px rgba(55, 0, 179, 0.5); /* Sombra roxa */
+}
+
+.dark-mode #texto1 {
+    background-color: rgb(70, 70, 70); /* Fundo mais escuro para o texto */
+    color: white; /* Texto branco */
+    box-shadow: 0 0 10px rgba(55, 0, 179, 0.5); /* Sombra roxa */
+}
+
+button {
     background-color: #3700b3;
 }
 
-body.dark-mode #formulario button:hover{
+button:hover {
     background-color: #270576;
 }
+
 
 /* Rodapé */
 body.dark-mode footer {
@@ -88,7 +107,6 @@ body.dark-mode .diagonal-line {
 #modo-noturno {
     text-align: right;
     padding: 5px;
-    margin-right: 19px;
 }
 
 #dark-mode-toggle {
@@ -101,4 +119,4 @@ body.dark-mode .diagonal-line {
 #dark-mode-toggle img {
     width: 40px; 
     height: 40px; 
-}  
+}
