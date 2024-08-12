@@ -85,7 +85,7 @@ body.dark-mode .diagonal-line {
     background-color: #bb86fc;
 }
 
-#modo-noturno {
+body.dark-mode #modo-noturno {
     text-align: right;
     padding: 5px;
     margin-right: 19px;
